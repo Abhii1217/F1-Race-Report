@@ -9,6 +9,7 @@ const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
   typeCast: function (field, next) {
     if (field.type === "JSON") {
       return JSON.parse(field.string('utf8'));
