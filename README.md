@@ -284,7 +284,7 @@ mysql -u root -p < Database/schema.sql
 |---|---|
 | Frontend | Vercel |
 | Backend | Render |
-| Database | Avian |
+| Database | Avien |
 
 > For production, ensure `NODE_ENV=production` on Render, whitelist your Vercel domain in `FRONTEND_URL`, and copy the Aiven MySQL credentials into your Render environment variables.
 > 
